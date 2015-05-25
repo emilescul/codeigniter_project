@@ -1,0 +1,61 @@
+
+
+Proiect Test RoundAssist
+People
+Rick Copil
+To emi_lescu@yahoo.com
+May 19 at 4:59 PM
+Mai jos este proiectul de test despre care am discutat.
+
+Prin asta testam urmatoarele cunostine:
+- SQL
+- Javascript
+- Ajax
+
+Te rog sa pui pe github proiectul impreuna cu exportul (mysqldump) de baza de date dupa ce ai terminat. 
+Da-mi invite de pe bitbucket pe adresa mea de email remus.copil@roundassist.com
+
+Proiect : Simple User Management
+
+Objective:
+O interfata de introducere si listare utilizatori (users).
+
+Programul va avea urmatoarele:
+1. Pagina de login
+- O pagina de login simpla unde se introduce username si parola. Toate paginile siteului pot fi accesate doar dupa 
+login.
+- Reset password, care prin email trimite o parola noua.
+- Userul cu care te poti loga poate fi de 2 tipuri: Admin si User. Admin poate face toate operatiile, User poate 
+vedea doar informatiile despre propriul user si sa le editeze.
+- Dupa login apare lista de utilizatori. Userului nu-i apare lista de utilizatori.
+
+2. O interfata de introducere/editare utilizatori
+- Interfata sa fie o fereastra modal. Validarile si salvarea se face fara reload la pagina. La apasare save sa fie 
+un feedback vizual, dupa care se inchide modal si se face refresh la lista de utilizatori (nu la pagina!)
+Userii se introduc in baza de date cu urmatoarele date: username, drop down category (admin/user), password (hash md5),
+ name, email, phone number,  description.
+Detalii: 
+- Username sa fie unic.
+- Numarul de Telefon sa fie conform planului nord american
+- Email format valid
+- Parola sa contina litere mari si un simbol sau numar
+- Selectare tip utilizator
+- Userii sa poata fi adaugati unei categorii de varste, selectabile din interfata de introducere/editare
+- O interfata de tip modal pentru editare categoria de varste. La apasarea butonului editare categorie, apare un modal
+ si se poate adauga sau sterge dintr-o lista simpla grupurile.
+- Userul, tipul si categoria de varsta a userului sa fie tabele separate in baza de date, la select sa se faca cu join.
+
+
+3. O interfata de listare utilizatori 
+- Listarea utilizatorilor sa fie in ordine alfanumerica pe username si sa se poata ordona din grid/table heading ASC 
+sau DESC fara refresh.
+- In lista pe mouse hover sa apara tooltip cu detaliile userului.
+- Click pe o linie sa duca la editare user intr-un modal, nu pagina separata.
+- Cand se apasa save, sa nu se faca reload la pagina. Sa se dea un feedback vizual dupa care se inchide modalul si se 
+face refresh doar la lista
+- Pe interfata de listare sa apara un filtru tip text box unde se pot filtra utilizatorii dupa cuvinte cheie - Daca la
+ taskul dinainte s-a folosit datatables atunci acest filtru sa nu fie cel din datatables ci unul separat facut de tine.
+- De asemenea se poate face o filtrare pe baza de tip de user si grup de user prin dropdownuri. Cand se selecteaza 
+dropdown la lista se face refresh automat (dar nu la pagina!). De asemenea se ia in considerare si filtrul text, adica
+ lista contine Userii de tipul selectat SI userii cu categoria de varsta selectata SI dei care contin textul introdus 
+ in filtrul de text.
